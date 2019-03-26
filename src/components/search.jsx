@@ -7,10 +7,15 @@ class Search extends Component {
     this.setState({ term: event.target.value });
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.props.onSubmit(this.state.term);
+  }
+
   render() {
     return (
       <div>
-        <form className="ui form">
+        <form className="ui form" onSubmit={this.handleSubmit}>
         <div className="field">
           <input
             type="text"
