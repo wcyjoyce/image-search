@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Search from "./search.jsx";
+import Images from "./images.jsx";
 import unsplash from "../api/unsplash.jsx";
 
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
     return (
       <div className="ui container">
         <Search onSubmit={this.handleSearchSubmit} />
+        <Images images={this.state.images} />
       </div>
     );
   }
