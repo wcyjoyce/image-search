@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 class Search extends Component {
-  state = { term: ""}
+  state = { term: "" };
 
   handleChange = (event) => {
     this.setState({ term: event.target.value });
